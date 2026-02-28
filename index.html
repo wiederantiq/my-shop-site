@@ -5,85 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wieder Antiquities | アンティーク＆アメリカン雑貨</title>
     <style>
-        /* 全体の雰囲気：アンティークなベージュとダークブラウン */
+        /* 全体の雰囲気：ヴィンテージなベージュとセピア調 */
         body {
             background-color: #f4ece1;
             color: #3e2723;
-            font-family: 'Georgia', serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
-        /* ヘッダー：ヴィンテージ看板風 */
+        /* ヘッダー：ヴィンテージ看板をイメージ */
         header {
             background-color: #5d4037;
             color: #ffca28; /* アメリカンなイエロー */
             text-align: center;
-            padding: 50px 20px;
-            border-bottom: 8px double #3e2723;
+            padding: 60px 20px;
+            border-bottom: 10px double #3e2723;
+        }
+
+        /* ロゴ画像の設定 */
+        .shop-logo {
+            width: 180px; /* ロゴのサイズ */
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%; /* 丸く切り抜き */
+            border: 5px solid #ffca28;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            margin-bottom: 20px;
+            background-color: #fff;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px #000;
+            font-size: 3.5rem;
+            margin: 10px 0;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0px #3e2723;
+            font-weight: bold;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #d7ccc8;
         }
 
         /* メインコンテンツ */
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .intro {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.5);
             border: 2px dashed #5d4037;
-            padding: 20px;
+            padding: 30px;
+            margin-bottom: 50px;
+            border-radius: 10px;
         }
 
-        /* メルカリボタン：アメリカン雑貨風の赤と青 */
+        .intro h2 {
+            color: #5d4037;
+            border-bottom: 2px solid #5d4037;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* メルカリセクション */
+        .mercari-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* メルカリボタン：ポップなアメリカンレッド */
         .mercari-button {
             display: inline-block;
             background-color: #ff4b5c; /* メルカリレッド */
-            color: white;
-            padding: 20px 40px;
+            color: #fff !important;
+            padding: 22px 50px;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
-            border-radius: 50px;
+            border-radius: 60px;
             border: 4px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
+            box-shadow: 0 8px 20px rgba(255, 75, 92, 0.4);
+            transition: all 0.3s ease;
+            margin: 20px 0;
         }
 
         .mercari-button:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px) scale(1.05);
             background-color: #e63946;
+            box-shadow: 0 12px 25px rgba(255, 75, 92, 0.5);
         }
 
         .notice {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #795548;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #8d6e63;
         }
 
         footer {
             margin-top: 100px;
+            background-color: #3e2723;
+            color: #efebe9;
+            padding: 30px;
             text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        /* レスポンシブ対応（スマホ表示） */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .mercari-button { font-size: 1.2rem; padding: 15px 30px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>wieder.antiq items </h1>
+    <img src="Gemini_Generated_Image_yfjkx4yfjkx4yfjk.png" alt="Wieder Antiquities Logo" class="shop-logo">
+    
+    <h1>wieder.antiq items</h1>
     <p>~ Timeless Treasures & American Vintage ~</p>
 </header>
 
@@ -95,18 +143,22 @@
         <p>ひとつひとつ厳選したアイテムを、心を込めてお届けします。</p>
     </div>
 
-    <h3>SHOP ON MERCARI</h3>
-    <p>現在、商品はメルカリにて安心・安全に販売しております。</p>
-    
-    <a href="https://jp.mercari.com/user/profile/458019653" class="mercari-button">
-        メルカリで商品を見る
-    </a>
+    <div class="mercari-section">
+        <h3>SHOP ON MERCARI</h3>
+        <p>現在、商品はメルカリにて安心・安全に販売しております。<br>
+        新着アイテムも随時更新中！</p>
+        
+        <a href="https://jp.mercari.com/user/profile/あなたのメルカリID" class="mercari-button">
+            メルカリでショップを見る
+        </a>
 
-    <p class="notice">※外部サイト（メルカリ）へ移動します。</p>
+        <p class="notice">※クリックするとメルカリの外部サイトへ移動します。</p>
+    </div>
 </div>
 
 <footer>
-    &copy; 2022 wieder.antiq items 
+    <p>&copy; 2022 wieder.antiq items. <br>
+    All vintage items are hand-selected with love.</p>
 </footer>
 
 </body>
