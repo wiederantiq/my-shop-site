@@ -15,42 +15,38 @@
             line-height: 1.8;
         }
 
-        /* ヘッダー：ヴィンテージ看板をイメージ */
+        /* ヘッダー：左上にロゴ、中央にタイトル */
         header {
             background-color: #5d4037;
             color: #ffca28; /* アメリカンなイエロー */
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             border-bottom: 10px double #3e2723;
+            position: relative; /* ロゴを配置する基準 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
         }
 
-        /* ロゴ画像の設定 */
+        /* ロゴ画像の設定：丸枠を外して左上に小さく配置 */
         .shop-logo {
-            width: 270px;          /* 丸枠の大きさはそのまま */
-            height: 270px;
-            border-radius: 20%;
-            border: 6px solid #ffca28;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.5);
-            margin-bottom: 25px;
-            background-color: #fff;
-            overflow: hidden;      /* 【重要】枠からはみ出た分を隠す */
-        }
-
-        /* 中の画像だけを大きくする設定を追加 */
-        .shop-logo img {
-            width: 90%;
-            height: 90%;
-            object-fit: cover;
-            transform: scale(1.0); /* ここで中のロゴだけを1.5倍に拡大！ */
-        }
-        /* マウスを置いた時に少し動く演出 */
-        .shop-logo:hover {
-            transform: scale(1.02);
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 80px;  /* 小さく調整 */
+            height: 80px;
+            object-fit: contain;
+            /* 枠線を消しました */
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin: 10px 0;
+            font-size: 3rem;
+            margin: 0;
             letter-spacing: 4px;
             text-shadow: 3px 3px 0px #3e2723;
             font-weight: bold;
@@ -58,8 +54,8 @@
 
         header p {
             font-style: italic;
-            font-size: 1.2rem;
-            margin-top: 0;
+            font-size: 1.1rem;
+            margin: 5px 0 0 0;
             color: #d7ccc8;
         }
 
@@ -132,9 +128,16 @@
         }
 
         /* レスポンシブ対応（スマホ表示） */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.2rem; }
-            .shop-logo { width: 200px; height: 200px; } /* スマホでは少し抑えめに */
+        @media (max-width: 768px) {
+            header {
+                padding-top: 100px; /* スマホでロゴがタイトルに被らないよう調整 */
+            }
+            .shop-logo {
+                left: 50%;
+                transform: translateX(-50%); /* スマホでは中央上に配置 */
+                top: 15px;
+            }
+            header h1 { font-size: 2rem; }
             .mercari-button { font-size: 1.2rem; padding: 15px 30px; }
         }
     </style>
