@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wieder.antiq | アンティーク＆アメリカン雑貨</title>
     <style>
-        /* 全体の雰囲気：ヴィンテージなベージュとセピア調 */
+        /* 全体の雰囲気 */
         body {
-            background-color: #f4ece1;
-            color: #3e2723;
-            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 0;
+            color: #3e2723;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.8;
+            /* 指定の画像を背景に設定 */
+            background-image: url('IMG_6083.JPG');
+            background-attachment: fixed; /* スクロールしても背景が動かない設定 */
+            background-size: cover;      /* 画面全体に画像を広げる */
+            background-position: center;  /* 画像の中央を表示 */
+            background-repeat: no-repeat;
         }
 
-        /* ヘッダー：左上にロゴ、中央にタイトル */
+        /* ヘッダー：背景画像に被らないよう不透明に設定 */
         header {
             background-color: #5d4037;
-            color: #ffca28; /* アメリカンなイエロー */
+            color: #ffca28;
             text-align: center;
             padding: 40px 20px;
             border-bottom: 10px double #3e2723;
-            position: relative; /* ロゴを配置する基準 */
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 120px;
+            z-index: 10;
         }
 
-        /* ロゴ画像の設定：丸枠を外して左上に小さく配置 */
+        /* ロゴ画像の設定 */
         .shop-logo {
             position: absolute;
             left: 20px;
             top: 20px;
-            width: 80px;  /* 小さく調整 */
+            width: 80px;
             height: 80px;
             object-fit: contain;
-            /* 枠線を消しました */
             border: none;
-            box-shadow: none;
-            background-color: transparent;
         }
 
         header h1 {
@@ -59,7 +62,7 @@
             color: #d7ccc8;
         }
 
-        /* メインコンテンツ */
+        /* メインコンテンツのコンテナ */
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -67,8 +70,9 @@
             text-align: center;
         }
 
+        /* 背景画像の上でも文字を読みやすくするため、白背景を少し透けさせる(0.85) */
         .intro {
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(244, 236, 225, 0.85); 
             border: 2px dashed #5d4037;
             padding: 30px;
             margin-bottom: 50px;
@@ -82,18 +86,18 @@
             margin-bottom: 20px;
         }
 
-        /* メルカリセクション */
+        /* メルカリセクションも少し透けさせる */
         .mercari-section {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        /* メルカリボタン：ポップなアメリカンレッド */
+        /* メルカリボタン */
         .mercari-button {
             display: inline-block;
-            background-color: #ff4b5c; /* メルカリレッド */
+            background-color: #ff4b5c;
             color: #fff !important;
             padding: 22px 50px;
             text-decoration: none;
@@ -109,36 +113,25 @@
         .mercari-button:hover {
             transform: translateY(-5px) scale(1.05);
             background-color: #e63946;
-            box-shadow: 0 12px 25px rgba(255, 75, 92, 0.5);
-        }
-
-        .notice {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #8d6e63;
         }
 
         footer {
             margin-top: 100px;
-            background-color: #3e2723;
+            background-color: rgba(62, 39, 35, 0.9); /* フッターも少し透けさせる */
             color: #efebe9;
             padding: 40px;
             text-align: center;
             font-size: 0.9rem;
         }
 
-        /* レスポンシブ対応（スマホ表示） */
         @media (max-width: 768px) {
-            header {
-                padding-top: 100px; /* スマホでロゴがタイトルに被らないよう調整 */
-            }
+            header { padding-top: 100px; }
             .shop-logo {
                 left: 50%;
-                transform: translateX(-50%); /* スマホでは中央上に配置 */
+                transform: translateX(-50%);
                 top: 15px;
             }
             header h1 { font-size: 2rem; }
-            .mercari-button { font-size: 1.2rem; padding: 15px 30px; }
         }
     </style>
 </head>
@@ -146,7 +139,6 @@
 
 <header>
     <img src="shop-logo2.jpeg" alt="Wieder Antiquities Logo" class="shop-logo">
-    
     <h1>wieder.antiq items</h1>
     <p>~ Timeless Treasures & American Vintage ~</p>
 </header>
@@ -167,7 +159,6 @@
         <a href="https://jp.mercari.com/user/profile/458019653" class="mercari-button">
             メルカリでショップを見る
         </a>
-
         <p class="notice">※クリックするとメルカリの外部サイトへ移動します。</p>
     </div>
 </div>
