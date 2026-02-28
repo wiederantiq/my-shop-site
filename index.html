@@ -24,19 +24,25 @@
             border-bottom: 10px double #3e2723;
         }
 
-        /* ロゴ画像の設定：サイズを1.5倍（180px → 270px）に拡大 */
+        /* ロゴ画像の設定 */
         .shop-logo {
-            width: 270px; /* 以前の180pxから1.5倍に大きくしました */
+            width: 270px;          /* 丸枠の大きさはそのまま */
             height: 270px;
-            object-fit: cover;
-            border-radius: 30%; /* 丸く切り抜き */
-            border: 6px solid #ffca28; /* 枠線も少し太くして強調 */
+            border-radius: 50%;
+            border: 6px solid #ffca28;
             box-shadow: 0 12px 25px rgba(0,0,0,0.5);
             margin-bottom: 25px;
             background-color: #fff;
-            transition: transform 0.3s ease;
+            overflow: hidden;      /* 【重要】枠からはみ出た分を隠す */
         }
 
+        /* 中の画像だけを大きくする設定を追加 */
+        .shop-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.5); /* ここで中のロゴだけを1.5倍に拡大！ */
+        }
         /* マウスを置いた時に少し動く演出 */
         .shop-logo:hover {
             transform: scale(1.02);
