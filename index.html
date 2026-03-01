@@ -36,14 +36,15 @@
             z-index: 10;
         }
 
-        /* ロゴ画像の設定 */
+        /* ロゴ画像の設定：円形で切り抜く設定を念のため追加 */
         .shop-logo {
             position: absolute;
             left: 20px;
             top: 20px;
             width: 80px;
             height: 80px;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius: 50%; /* 四角い画像の角を隠す設定 */
             border: none;
         }
 
@@ -115,6 +116,12 @@
             background-color: #e63946;
         }
 
+        .notice {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #8d6e63;
+        }
+
         footer {
             margin-top: 100px;
             background-color: rgba(62, 39, 35, 0.9); /* フッターも少し透けさせる */
@@ -122,6 +129,16 @@
             padding: 40px;
             text-align: center;
             font-size: 0.9rem;
+        }
+
+        /* 古物商表記のスタイル */
+        .license-info {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #d7ccc8;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 15px;
+            display: inline-block;
         }
 
         @media (max-width: 768px) {
@@ -166,6 +183,11 @@
 <footer>
     <p>&copy; 2022 wieder.antiq. <br>
     All vintage items are hand-selected with love.</p>
+    
+    <div class="license-info">
+        千葉県公安委員会許可 第441200001484号<br>
+        古物商（書籍商）
+    </div>
 </footer>
 
 </body>
