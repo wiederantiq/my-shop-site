@@ -36,7 +36,7 @@
             z-index: 10;
         }
 
-        /* ロゴ画像：角の白を隠すために円形切り抜きを維持 */
+        /* ロゴ画像 */
         .shop-logo {
             position: absolute;
             left: 20px;
@@ -85,13 +85,13 @@
             margin-bottom: 20px;
         }
 
-        /* 新設：商品ギャラリーセクションのスタイル */
+        /* 商品ギャラリーセクション */
         .gallery-section {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin-bottom: 50px; /* 下のセクションとの間隔 */
+            margin-bottom: 50px;
         }
 
         .gallery-section h3 {
@@ -104,28 +104,27 @@
         /* グリッドレイアウト（2列） */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2列並び */
-            gap: 20px; /* 画像間の隙間 */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
-        /* ギャラリー内の各アイテム（画像と枠） */
         .gallery-item {
             overflow: hidden;
             border-radius: 8px;
-            border: 4px solid #fff; /* 白い縁取りでポラロイド風に */
+            border: 4px solid #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             background-color: #fff;
             transition: transform 0.3s ease;
         }
 
         .gallery-item:hover {
-            transform: scale(1.03); /* マウスホバーで少し大きく */
+            transform: scale(1.03);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 300px; /* 画像の高さを統一 */
-            object-fit: cover; /* 画像を枠に合わせつつトリミング */
+            height: 300px;
+            object-fit: cover;
             display: block;
         }
 
@@ -165,7 +164,6 @@
             font-size: 0.9rem;
         }
 
-        /* 古物商表記スタイル */
         .license-info {
             margin-top: 15px;
             font-size: 0.8rem;
@@ -176,7 +174,7 @@
             line-height: 1.6;
         }
 
-        /* レスポンシブ対応（スマホ表示） */
+        /* レスポンシブ対応 */
         @media (max-width: 768px) {
             header { padding-top: 100px; }
             .shop-logo {
@@ -185,7 +183,6 @@
                 top: 15px;
             }
             header h1 { font-size: 2rem; }
-            /* スマホではギャラリーを1列に */
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
@@ -216,16 +213,16 @@
         <p>これまでにお客様の元へ旅立った、一点物のアイテムたち。</p>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="図1.png" alt="販売済み商品1">
+                <img src="紹介１.jpg" alt="販売済み商品1">
             </div>
             <div class="gallery-item">
-                <img src="紹介2.jpg" alt="販売済み商品2">
+                <img src="紹介２.jpg" alt="販売済み商品2">
             </div>
             <div class="gallery-item">
-                <img src="紹介3.jpg" alt="販売済み商品3">
+                <img src="紹介３.jpg" alt="販売済み商品3">
             </div>
             <div class="gallery-item">
-                <img src="紹介4.jpg" alt="販売済み商品4">
+                <img src="紹介４.jpg" alt="販売済み商品4">
             </div>
         </div>
     </div>
